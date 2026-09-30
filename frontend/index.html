@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700;800&family=Manrope:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800;900&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/static/css/styles.css">
+  <link rel="stylesheet" href="/static/css/styles.css?v=2.2">
 </head>
 <body class="go-os-body">
   <div class="app-container">
@@ -76,53 +76,62 @@
         <div class="go-hero-header">
           <div class="go-asset-identity">
             <div class="go-symbol-row">
-              <h1 id="symbolTitle" class="go-symbol">NVDA</h1>
-              <div id="signalBadge" class="signal-badge badge-strong-buy">
-                <span class="badge-dot"></span>
-                <span id="verdictText">STRONG BUY</span>
+              <div class="symbol-left-group">
+                <div class="symbol-title-group">
+                  <h1 id="symbolTitle" class="go-symbol">NVDA</h1>
+                  <span class="symbol-subtitle">REAL-TIME INSTITUTIONAL TELEMETRY</span>
+                </div>
+                <div id="signalBadge" class="signal-badge badge-strong-buy">
+                  <span class="badge-dot"></span>
+                  <span id="verdictText">STRONG BUY</span>
+                </div>
+                <div class="rr-pill" id="rrBadge">R:R 1 : 2.0</div>
               </div>
-              <div id="plainEnglishPill" class="plain-english-pill pill-bullish">
-                <span id="plainEnglishIcon">🐂</span>
-                <span id="plainEnglishText">BULLISH — Price is rising. Good time to buy or hold.</span>
+
+              <!-- Quick MTF Badges -->
+              <div class="go-badges-cluster">
+                <div id="mtfConfirmBadge" class="mtf-confirm-badge hidden">
+                  ✅ ALL 3 TIMEFRAMES CONFIRMED
+                </div>
+                <div id="mtfMixedBadge" class="mtf-mixed-badge hidden">
+                  ⚡ MIXED TIMEFRAMES
+                </div>
+                <span id="reliabilityLabel" class="reliability-label-tag">HIGH RELIABILITY</span>
               </div>
-              <div class="rr-pill" id="rrBadge">R:R 1 : 2.0</div>
             </div>
 
-            <!-- Big Live Price & Metrics Ribbon -->
-            <div class="go-price-ribbon">
-              <div class="go-ribbon-item">
-                <span class="go-ribbon-label">CURRENT PRICE</span>
-                <span id="lastPriceDisplay" class="go-price-big">$0.00</span>
-              </div>
-              <div class="go-ribbon-item">
-                <span class="go-ribbon-label">24H CHANGE</span>
-                <span id="changeDisplay" class="go-change-pill">+0.00 (+0.0%)</span>
-              </div>
-              <div class="go-ribbon-item">
-                <span class="go-ribbon-label">CONFLUENCE</span>
-                <span id="scoreDisplay" class="score-pill">+0/100</span>
-              </div>
-              <div class="go-ribbon-item">
-                <span class="go-ribbon-label">ALGO CONFIDENCE</span>
-                <span id="confidenceVal" class="go-metric-glow">--%</span>
-              </div>
-              <div class="go-ribbon-item">
-                <span class="go-ribbon-label">RELIABILITY</span>
+            <!-- Full-Width Sentiment Directive Pill -->
+            <div id="plainEnglishPill" class="plain-english-pill pill-bullish">
+              <span id="plainEnglishIcon">🐂</span>
+              <span id="plainEnglishText">BULLISH — Price is rising. Good time to buy or hold.</span>
+            </div>
+          </div>
+
+          <!-- Big Live Price & Metrics Ribbon (Full Width Strip) -->
+          <div class="go-price-ribbon">
+            <div class="go-ribbon-item">
+              <span class="go-ribbon-label">CURRENT PRICE</span>
+              <span id="lastPriceDisplay" class="go-price-big">$0.00</span>
+            </div>
+            <div class="go-ribbon-item">
+              <span class="go-ribbon-label">24H CHANGE</span>
+              <span id="changeDisplay" class="go-change-pill">+0.00 (+0.0%)</span>
+            </div>
+            <div class="go-ribbon-item">
+              <span class="go-ribbon-label">CONFLUENCE</span>
+              <span id="scoreDisplay" class="score-pill">+0/100</span>
+            </div>
+            <div class="go-ribbon-item">
+              <span class="go-ribbon-label">ALGO CONFIDENCE</span>
+              <span id="confidenceVal" class="go-metric-glow">--%</span>
+            </div>
+            <div class="go-ribbon-item">
+              <span class="go-ribbon-label">RELIABILITY</span>
+              <div class="reliability-val-group">
                 <span id="reliabilityGrade" class="reliability-grade grade-a">A</span>
                 <span id="reliabilityScore" class="go-sub-score">70/100</span>
               </div>
             </div>
-          </div>
-
-          <!-- Quick MTF Badges -->
-          <div class="go-badges-cluster">
-            <div id="mtfConfirmBadge" class="mtf-confirm-badge hidden">
-              ✅ ALL 3 TIMEFRAMES CONFIRMED
-            </div>
-            <div id="mtfMixedBadge" class="mtf-mixed-badge hidden">
-              ⚡ MIXED TIMEFRAMES
-            </div>
-            <span id="reliabilityLabel" class="reliability-label-tag">HIGH RELIABILITY</span>
           </div>
         </div>
 
@@ -179,7 +188,7 @@
           </div>
 
           <!-- 3. Take Profit 2 (Runner) -->
-          <div class="go-exact-tile tile-tp" id="cardTp2">
+          <div class="go-exact-tile tile-tp2" id="cardTp2">
             <div class="tile-header">
               <span class="tile-tag tag-tp2" id="tp2Label">TAKE PROFIT 2 (RUNNER)</span>
               <span class="tile-status-dot dot-blue"></span>

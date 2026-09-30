@@ -757,7 +757,7 @@ class AlphaPulseApp {
     const fn = data.factor_neutral;
     if (fn && this.factorSScoreVal) {
       const s = fn.s_score !== undefined ? fn.s_score : 0.0;
-      this.factorSScoreVal.textContent = `${s >= 0 ? '+' : ''}${s.toFixed(2)}σ`;
+      this.factorSScoreVal.textContent = `${s >= 0 ? '+' : ''}${s.toFixed(2)}\u03C3`;
       this.factorSScoreVal.style.color = fn.regime_color || '#4facfe';
 
       if (this.factorRegimeBadge) {
