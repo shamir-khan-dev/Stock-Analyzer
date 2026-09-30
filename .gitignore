@@ -1,0 +1,34 @@
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environment & Secrets
+.env
+.env.local
+*.env
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Scratch & temporary test files
+test_*.py
+scratch/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE & Editor files
+.vscode/
+.idea/
+
+# Local data cache
+data/
+backend/app/paper_portfolio.json
+backend/app/signal_log.json
