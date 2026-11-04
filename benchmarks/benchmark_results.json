@@ -1,0 +1,44 @@
+{
+  "num_iterations": 150,
+  "bars_evaluated": 365,
+  "indicator_throughput_bars_per_sec": 245747.9,
+  "backtest_latency_ms": {
+    "p50": 322.92,
+    "p95": 456.9,
+    "p99": 518.47,
+    "min": 200.94,
+    "max": 607.3
+  },
+  "backtest_throughput_runs_per_sec": 3.0,
+  "sample_strategy_comparison": [
+    {
+      "strategy": "AlphaPulse Confluence",
+      "net_return_pct": 39.76,
+      "sharpe_ratio": 6.39,
+      "sortino_ratio": 9.68,
+      "max_drawdown_pct": 8.93,
+      "win_rate_pct": 52.9,
+      "trades": 17
+    },
+    {
+      "strategy": "Buy & Hold (Benchmark)",
+      "net_return_pct": 125.28,
+      "sharpe_ratio": 2.25,
+      "sortino_ratio": 2.34,
+      "max_drawdown_pct": 15.96,
+      "win_rate_pct": 100.0,
+      "trades": 1
+    },
+    {
+      "strategy": "Moving Average Trend",
+      "net_return_pct": 51.4,
+      "sharpe_ratio": 13.74,
+      "sortino_ratio": 101.95,
+      "max_drawdown_pct": 4.17,
+      "win_rate_pct": 50.0,
+      "trades": 2
+    }
+  ],
+  "alpha_vs_buy_and_hold_pct": -85.52,
+  "drawdown_mitigation_pct": 7.03
+}
