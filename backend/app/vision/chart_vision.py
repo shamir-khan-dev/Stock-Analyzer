@@ -184,7 +184,7 @@ def analyze_chart_with_llm(img: Image.Image) -> Optional[Dict[str, Any]]:
         try:
             import google.generativeai as genai
             genai.configure(api_key=GEMINI_API_KEY)
-            model = genai.GenerativeModel("gemini-1.5-flash")
+            model = genai.GenerativeModel("gemini-3.8-flash")
             prompt = """
             You are a senior quantitative hedge fund trader and technical chart analyst.
             Analyze this chart screenshot in detail:

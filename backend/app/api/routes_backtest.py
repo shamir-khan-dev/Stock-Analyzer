@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException, Query
 from ..core.data_fetcher import fetch_history_data
-from ..core.backtester import run_strategy_backtest
+from ..core.backtester import run_strategy_backtest, run_comparative_backtest
 
 router = APIRouter()
 
@@ -12,7 +12,7 @@ async def backtest_ticker(
 ):
     """
     Executes historical backtest of the confluence strategy on the ticker.
-    Returns Win Rate, Profit Factor, Max Drawdown, and recent trade logs.
+    Returns Win Rate, Profit Factor, Max Drawdown, Sharpe, Sortino, and recent trade logs.
     """
     clean_sym = ticker.strip().upper()
     df = fetch_history_data(clean_sym, period=period, interval="1d")
@@ -24,6 +24,33 @@ async def backtest_ticker(
         )
         
     result = run_strategy_backtest(df, initial_capital=capital)
+    if "error" in result:
+        raise HTTPException(status_code=400, detail=result["error"])
+        
+    result["symbol"] = clean_sym
+    result["period"] = period
+    return result
+
+@router.get("/backtest/{ticker}/comparative")
+async def backtest_comparative_ticker(
+    ticker: str,
+    period: str = Query("1y", description="Backtest history: 6mo, 1y, 2y"),
+    capital: float = Query(10000.0, description="Initial backtest capital")
+):
+    """
+    Executes multi-strategy comparative backtest comparing AlphaPulse Confluence vs Buy & Hold vs Golden Cross.
+    Returns comparative performance metrics, Sharpe, Sortino, alpha generation, and drawdown mitigation.
+    """
+    clean_sym = ticker.strip().upper()
+    df = fetch_history_data(clean_sym, period=period, interval="1d")
+    
+    if df is None or df.empty:
+        raise HTTPException(
+            status_code=404,
+            detail=f"Could not retrieve historical data for symbol '{clean_sym}'."
+        )
+        
+    result = run_comparative_backtest(df, initial_capital=capital)
     if "error" in result:
         raise HTTPException(status_code=400, detail=result["error"])
         
