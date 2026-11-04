@@ -32,3 +32,5 @@ desktop.ini
 data/
 backend/app/paper_portfolio.json
 backend/app/signal_log.json
+backend/backend/
+frontend/frontend/
