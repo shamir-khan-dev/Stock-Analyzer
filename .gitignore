@@ -28,8 +28,9 @@ desktop.ini
 .vscode/
 .idea/
 
-# Local data cache
+# Local data cache & graphify
 data/
+graphify-out/
 backend/app/paper_portfolio.json
 backend/app/signal_log.json
 backend/backend/
