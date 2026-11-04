@@ -52,3 +52,4 @@ def test_backtest_endpoint_not_found():
     with patch("app.api.routes_backtest.fetch_history_data", return_value=None):
         response = client.get("/api/backtest/INVALID?period=1y")
         assert response.status_code == 404
+

@@ -2,6 +2,7 @@
 
 > **Production-Grade Quantitative Execution System:** AlphaPulse (GO::OS) is an institutional-grade quantitative trading platform and execution terminal designed to analyze real-time equity and crypto markets, isolate idiosyncratic alpha from sector/market beta, compute options dealer gamma exposure (GEX & Max Pain), execute comparative backtests, and enforce mathematical risk parity.
 
+[![CI](https://github.com/shamir-khan-dev/Stock-Analyzer/actions/workflows/ci.yml/badge.svg)](https://github.com/shamir-khan-dev/Stock-Analyzer/actions)
 [![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 [![Tests](https://img.shields.io/badge/Tests-15%20Passed%20%7C%20100%25-brightgreen?style=flat-square&logo=pytest&logoColor=white)](tests/)
 [![Throughput](https://img.shields.io/badge/Throughput-245k%20bars%2Fsec-blue?style=flat-square)](benchmarks/benchmark_results.json)

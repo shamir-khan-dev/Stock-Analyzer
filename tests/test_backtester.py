@@ -96,3 +96,4 @@ def test_backtest_insufficient_data():
     df_short = pd.DataFrame({"Close": [10.0] * 20})
     res = run_strategy_backtest(df_short)
     assert "error" in res
+
