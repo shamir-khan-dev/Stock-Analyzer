@@ -146,7 +146,7 @@ class BotAndVisionManager {
       this.visionBullets.innerHTML = findings.map(f => `<li>${f}</li>`).join('');
 
       // Notify TradeBot in chat
-      this.appendBotMessage(`📷 <strong>Pasted Chart Diagnostic Complete!</strong><br>Verdict: <span style="color:${data.verdict_color}; font-weight:bold;">${data.verdict}</span> (${data.confidence_pct}% Confidence).<br>${data.trade_recommendation ? data.trade_recommendation.rationale : ''}`);
+      this.appendBotMessage(`<strong>Pasted Chart Diagnostic Complete</strong><br>Verdict: <span style="color:${data.verdict_color}; font-weight:bold;">${data.verdict}</span> (${data.confidence_pct}% Confidence).<br>${data.trade_recommendation ? data.trade_recommendation.rationale : ''}`);
     } catch (err) {
       console.error(err);
       this.visionBadge.textContent = 'ANALYSIS ERROR';
@@ -192,7 +192,7 @@ class BotAndVisionManager {
     const div = document.createElement('div');
     div.className = 'chat-msg user-msg';
     div.innerHTML = `
-      <div class="msg-avatar">👤</div>
+      <div class="msg-avatar">YOU</div>
       <div class="msg-bubble">${text}</div>
     `;
     this.chatLog.appendChild(div);
@@ -203,7 +203,7 @@ class BotAndVisionManager {
     const div = document.createElement('div');
     div.className = 'chat-msg bot-msg';
     div.innerHTML = `
-      <div class="msg-avatar">🤖</div>
+      <div class="msg-avatar">AI</div>
       <div class="msg-bubble">${htmlContent}</div>
     `;
     this.chatLog.appendChild(div);
@@ -219,8 +219,8 @@ class BotAndVisionManager {
     typingDiv.className = 'chat-msg bot-msg';
     typingDiv.id = typingId;
     typingDiv.innerHTML = `
-      <div class="msg-avatar">🤖</div>
-      <div class="msg-bubble text-secondary">TradeBot is thinking...</div>
+      <div class="msg-avatar">AI</div>
+      <div class="msg-bubble text-secondary">TradeBot is processing...</div>
     `;
     this.chatLog.appendChild(typingDiv);
     this.chatLog.scrollTop = this.chatLog.scrollHeight;

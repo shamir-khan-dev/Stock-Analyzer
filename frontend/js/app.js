@@ -401,16 +401,16 @@ class AlphaPulseApp {
     if (plainPill && plainIcon && plainText) {
       if (verdict.includes('STRONG BUY') || (verdict.includes('BUY') && !verdict.includes('SELL'))) {
         plainPill.className = 'plain-english-pill pill-bullish';
-        plainIcon.textContent = '🐂';
-        plainText.textContent = 'BULLISH — Price is rising. Good time to buy or hold.';
+        plainIcon.textContent = '';
+        plainText.textContent = 'Bullish (price in established upward regime)';
       } else if (verdict.includes('STRONG SELL') || verdict.includes('SELL')) {
         plainPill.className = 'plain-english-pill pill-bearish';
-        plainIcon.textContent = '🐻';
-        plainText.textContent = 'BEARISH — Price is falling. High risk; consider selling or cutting losses.';
+        plainIcon.textContent = '';
+        plainText.textContent = 'Bearish (price in distribution cycle, elevated risk)';
       } else {
         plainPill.className = 'plain-english-pill pill-neutral';
-        plainIcon.textContent = '⚖️';
-        plainText.textContent = 'NEUTRAL — Price moving sideways. Wait for a clear breakout.';
+        plainIcon.textContent = '';
+        plainText.textContent = 'Neutral (consolidation range, awaiting breakout)';
       }
     }
 
@@ -847,12 +847,12 @@ class AlphaPulseApp {
     const tp2Sub = document.getElementById('tp2Sub');
 
     if (entryLabel) entryLabel.textContent = labels.entry_title || (isBuy ? 'WHEN TO BUY (ENTRY)' : (isSell ? 'WHEN TO SELL (EXIT NOW)' : 'PIVOT BENCHMARK'));
-    if (entrySub) entrySub.textContent = labels.entry_sub || (isBuy ? 'Market or Limit Entry' : (isSell ? 'Sell existing shares at Market' : 'Consolidation baseline'));
-    if (slLabel) slLabel.textContent = labels.sl_title || (isBuy ? 'STOP-LOSS (CUT LOSS)' : (isSell ? 'INVALIDATION CEILING' : 'SUPPORT FLOOR'));
+    if (entrySub) entrySub.textContent = labels.entry_sub || (isBuy ? 'Market or limit order entry' : (isSell ? 'Exit shares at market' : 'Consolidation baseline'));
+    if (slLabel) slLabel.textContent = labels.sl_title || (isBuy ? 'Stop Loss Invalidation' : (isSell ? 'Invalidation Ceiling' : 'Support Floor'));
     if (slSub && labels.sl_sub) slSub.textContent = labels.sl_sub;
-    if (tp1Label) tp1Label.textContent = labels.tp1_title || (isBuy ? 'TAKE PROFIT 1 (SELL 50%)' : (isSell ? 'DOWNSIDE TARGET 1 (RE-BUY DIP)' : 'RESISTANCE 1'));
-    if (tp1Sub) tp1Sub.textContent = labels.tp1_sub || (isBuy ? 'Target 1 Gain' : (isSell ? 'First Support zone' : 'Breakout level'));
-    if (tp2Label) tp2Label.textContent = labels.tp2_title || (isBuy ? 'TAKE PROFIT 2 (RUNNER)' : (isSell ? 'DOWNSIDE TARGET 2 (VALUE FLOOR)' : 'RESISTANCE 2'));
+    if (tp1Label) tp1Label.textContent = labels.tp1_title || (isBuy ? 'Primary Target (50%)' : (isSell ? 'Downside Target 1' : 'Resistance 1'));
+    if (tp1Sub) tp1Sub.textContent = labels.tp1_sub || (isBuy ? 'Target 1 Gain' : (isSell ? 'First support level' : 'Breakout level'));
+    if (tp2Label) tp2Label.textContent = labels.tp2_title || (isBuy ? 'Secondary Target' : (isSell ? 'Downside Target 2' : 'Resistance 2'));
     if (tp2Sub) tp2Sub.textContent = labels.tp2_sub || (isBuy ? 'Extended Gain' : (isSell ? 'Deep support level' : 'Runner ceiling'));
 
     // Dynamic Plain-English Helpers
@@ -862,20 +862,20 @@ class AlphaPulseApp {
     const slHelp = document.getElementById('slHelp');
 
     if (isSell) {
-      if (entryHelp) entryHelp.textContent = '🚪 Target price to sell & exit existing shares';
-      if (tp1Help) tp1Help.textContent = '📉 First lower support target (dip level)';
-      if (tp2Help) tp2Help.textContent = '📉 Deeper value floor if crash continues';
-      if (slHelp) slHelp.textContent = '🛑 Invalidation ceiling: exit cutoff if price recovers';
+      if (entryHelp) entryHelp.textContent = 'Target price to exit existing shares';
+      if (tp1Help) tp1Help.textContent = 'First support level (initial downside target)';
+      if (tp2Help) tp2Help.textContent = 'Secondary value floor target';
+      if (slHelp) slHelp.textContent = 'Invalidation ceiling on price recovery';
     } else if (isBuy) {
-      if (entryHelp) entryHelp.textContent = '🎯 Recommended purchase price to enter';
-      if (tp1Help) tp1Help.textContent = '💰 Sell half here to bank guaranteed profit';
-      if (tp2Help) tp2Help.textContent = '🚀 Extended target if rally continues surging';
-      if (slHelp) slHelp.textContent = '🛑 Emergency exit: sell here to prevent big losses';
+      if (entryHelp) entryHelp.textContent = 'Recommended entry price';
+      if (tp1Help) tp1Help.textContent = 'Scale 50% to secure capital gains';
+      if (tp2Help) tp2Help.textContent = 'Continuation target for residual size';
+      if (slHelp) slHelp.textContent = 'Strict invalidation cutoff to prevent capital loss';
     } else {
-      if (entryHelp) entryHelp.textContent = '⚖️ Sideways benchmark price';
-      if (tp1Help) tp1Help.textContent = '🎯 Upper resistance ceiling';
-      if (tp2Help) tp2Help.textContent = '🎯 Secondary breakout level';
-      if (slHelp) slHelp.textContent = '🛑 Lower support floor';
+      if (entryHelp) entryHelp.textContent = 'Consolidation benchmark price';
+      if (tp1Help) tp1Help.textContent = 'Upper resistance ceiling';
+      if (tp2Help) tp2Help.textContent = 'Secondary breakout level';
+      if (slHelp) slHelp.textContent = 'Lower support floor';
     }
 
     // Highlight the primary action card
@@ -909,23 +909,23 @@ class AlphaPulseApp {
       playbook.className = `execution-playbook ${isBuy ? 'playbook-buy' : (isSell ? 'playbook-sell' : 'playbook-neutral')}`;
     }
     if (pBadge) {
-      pBadge.textContent = isBuy ? '🟢 BUY PLAYBOOK' : (isSell ? '🔴 SELL PLAYBOOK' : '⏸️ NEUTRAL PLAYBOOK');
+      pBadge.textContent = isBuy ? 'Buy Playbook' : (isSell ? 'Sell Playbook' : 'Neutral Playbook');
     }
     if (pHeadline) {
-      pHeadline.textContent = setup.headline || (isBuy ? 'Bullish Buy Setup — Defined Risk' : (isSell ? 'Bearish Sell / Exit Setup — Protect Capital' : 'Sideways Consolidation — Stand Aside'));
+      pHeadline.textContent = setup.headline || (isBuy ? 'Bullish Buy Setup: Defined Risk' : (isSell ? 'Bearish Exit Setup: Protect Capital' : 'Sideways Consolidation: Stand Aside'));
     }
     if (pSummary) {
       pSummary.textContent = setup.summary_text || (isBuy ? `Optimal entry at $${(setup.entry_price || price).toFixed(2)}. Target $${(setup.take_profit_1 || price).toFixed(2)}. Strict stop at $${(setup.stop_loss || price).toFixed(2)}.` : (isSell ? `Bearish distribution confirmed. Liquidate existing shares near $${(setup.entry_price || price).toFixed(2)} before price drops toward $${(setup.take_profit_1 || price).toFixed(2)}.` : 'Sideways market with balanced order flow. Wait for a clear breakout.'));
     }
     if (pIfHolding) {
-      pIfHolding.textContent = setup.if_holding || (isBuy ? 'Hold current shares and target profit levels.' : (isSell ? `SELL NOW around $${(setup.entry_price || price).toFixed(2)} to protect gains and cut exposure.` : 'Hold with tight trailing stop.'));
+      pIfHolding.textContent = setup.if_holding || (isBuy ? 'Hold current shares and target profit levels.' : (isSell ? `Sell around $${(setup.entry_price || price).toFixed(2)} to protect gains and cut exposure.` : 'Hold with tight trailing stop.'));
     }
     if (pHoldingBadge) {
-      pHoldingBadge.textContent = isBuy ? 'HOLD / ACCUMULATE' : (isSell ? 'SELL / EXIT NOW' : 'HOLD STOP');
+      pHoldingBadge.textContent = isBuy ? 'Hold or Accumulate' : (isSell ? 'Exit Position' : 'Hold Stop');
       pHoldingBadge.className = `pcard-badge ${isBuy ? 'badge-buy' : (isSell ? 'badge-sell' : 'badge-neutral')}`;
     }
     if (pIfBuying) {
-      pIfBuying.textContent = setup.if_buying || (isBuy ? `Safe to buy now near $${(setup.entry_price || price).toFixed(2)} with stop at $${(setup.stop_loss || price).toFixed(2)}.` : (isSell ? `DO NOT BUY YET. Wait for price to drop to support ($${(setup.take_profit_1 || price).toFixed(2)}) or reverse.` : 'Wait for confirmed breakout.'));
+      pIfBuying.textContent = setup.if_buying || (isBuy ? `Entry viable near $${(setup.entry_price || price).toFixed(2)} with invalidation at $${(setup.stop_loss || price).toFixed(2)}.` : (isSell ? `Awaiting support confirmation at $${(setup.take_profit_1 || price).toFixed(2)} before opening long exposure.` : 'Wait for confirmed breakout.'));
     }
     if (pBuyingBadge) {
       pBuyingBadge.textContent = isBuy ? 'SAFE TO BUY' : (isSell ? 'DO NOT BUY' : 'WAIT FOR BREAKOUT');
@@ -990,8 +990,8 @@ class AlphaPulseApp {
     if (heroShares) heroShares.textContent = `${shares.toLocaleString()} Shares`;
     if (heroCap) heroCap.textContent = isSell ? `~$${targetProfit.toFixed(0)} drop avoided` : `$${positionCost.toLocaleString(undefined, {maximumFractionDigits:0})} cap • $${maxCashRisk.toFixed(0)} risk`;
 
-    if (sharesLabel) sharesLabel.textContent = isSell ? 'SHARES TO EXIT / SHORT' : 'RECOMMENDED SHARES TO BUY';
-    if (profitLabel) profitLabel.textContent = isSell ? 'DOWNSIDE LOSS AVOIDED' : 'TARGET 1 PROFIT';
+    if (sharesLabel) sharesLabel.textContent = isSell ? 'Shares to Exit or Short' : 'Calibrated Shares to Buy';
+    if (profitLabel) profitLabel.textContent = isSell ? 'Downside Loss Avoided' : 'Target 1 Profit';
     if (sharesVal) sharesVal.textContent = `${shares.toLocaleString()} Shares`;
     if (posCostVal) posCostVal.textContent = `$${positionCost.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
     if (cashRiskVal) cashRiskVal.textContent = `$${maxCashRisk.toFixed(2)}`;
@@ -999,9 +999,9 @@ class AlphaPulseApp {
 
     if (explanation) {
       if (isSell) {
-        explanation.innerHTML = `⚠️ <strong>Exit Plan:</strong> If holding shares, selling <strong>${shares.toLocaleString()} shares</strong> at <strong>$${entry.toFixed(2)}</strong> saves you <strong>$${targetProfit.toFixed(2)}</strong> from the forecasted drop to $${tp1.toFixed(2)}. (Or if shorting: risk is capped at $${maxCashRisk.toFixed(0)} if stopped out at $${stopLoss.toFixed(2)}).`;
+        explanation.innerHTML = `<strong>Exit Plan:</strong> If holding shares, liquidating <strong>${shares.toLocaleString()} shares</strong> near <strong>$${entry.toFixed(2)}</strong> protects <strong>$${targetProfit.toFixed(2)}</strong> from anticipated downside toward $${tp1.toFixed(2)}. (Or if shorting: maximum risk is capped at $${maxCashRisk.toFixed(0)} if stopped at $${stopLoss.toFixed(2)}).`;
       } else {
-        explanation.innerHTML = `💡 <strong>Trade Plan:</strong> On a $${capital.toLocaleString()} account risking ${(riskPct * 100).toFixed(0)}% ($${maxCashRisk.toFixed(0)}), buy <strong>${shares.toLocaleString()} shares</strong> at <strong>$${entry.toFixed(2)}</strong> ($${positionCost.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} total capital). If stopped at <strong>$${stopLoss.toFixed(2)}</strong>, your loss is capped at $${(shares * riskPerShare).toFixed(2)}. Target 1 profit is <strong>+$${targetProfit.toFixed(2)}</strong>.`;
+        explanation.innerHTML = `<strong>Allocation Plan:</strong> On a $${capital.toLocaleString()} account risking ${(riskPct * 100).toFixed(0)}% ($${maxCashRisk.toFixed(0)}), allocate <strong>${shares.toLocaleString()} shares</strong> at <strong>$${entry.toFixed(2)}</strong> ($${positionCost.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} total capital). If stopped at <strong>$${stopLoss.toFixed(2)}</strong>, loss is capped at $${(shares * riskPerShare).toFixed(2)}. Target 1 profit expectation is <strong>+$${targetProfit.toFixed(2)}</strong>.`;
       }
     }
   }
