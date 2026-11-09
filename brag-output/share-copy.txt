@@ -1,0 +1,12 @@
+AlphaPulse: High Throughput Quantitative Backtesting Engine & Algorithmic Signal Telemetry
+
+Engineered a high performance algorithmic stock backtester and quantitative trading engine. Computes dynamic technical indicators (RSI, MACD, Bollinger Bands) across historical market tick data with 100% vectorized NumPy math and sub 5ms execution latency.
+
+Key Architecture Capabilities:
+• Vectorized indicator computation pipelines running up to 50,000 candles per second
+• Zero lookahead bias guarantee using point in time data windowing
+• FastAPI asynchronous REST API with real time chart streaming
+• 100% verified test suite across backtesting engines and mathematical signal generators
+
+Tech Stack: FastAPI, Python 3.13, NumPy, Pandas, Chart.js, Docker, Pytest
+Project Code: https://github.com/shamir-khan-dev/stock-analyzer

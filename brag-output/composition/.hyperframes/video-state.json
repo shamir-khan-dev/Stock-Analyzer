@@ -1,0 +1,139 @@
+{
+  "version": 1,
+  "historyId": "1ac7bba2-04a9-4fd3-8742-729f12b79382",
+  "currentRevision": "537edc36-afb9-4a50-9989-acaf400ca42d",
+  "pendingChanges": false,
+  "files": {
+    "assets/music/bgm.mp3": {
+      "hash": "87ef63f4982ea916342f1106e53c9c85701782bd0b32257eb7b7ac9399d72c98",
+      "content": "C:\\Users\\shami\\.cache\\hyperframes\\history\\1ac7bba2-04a9-4fd3-8742-729f12b79382\\blobs\\87\\87ef63f4982ea916342f1106e53c9c85701782bd0b32257eb7b7ac9399d72c98"
+    },
+    "hyperframes.json": {
+      "hash": "a460a1cf3fcc2672ccbd28820fc6190c0f0ef7eb43b9e0b56e888222994fc057",
+      "content": "C:\\Users\\shami\\.cache\\hyperframes\\history\\1ac7bba2-04a9-4fd3-8742-729f12b79382\\blobs\\a4\\a460a1cf3fcc2672ccbd28820fc6190c0f0ef7eb43b9e0b56e888222994fc057"
+    },
+    "index.html": {
+      "hash": "3574cadc9e7db277d0a1cd42800d87684a7480167d0f1903e5140824f4df1ca1",
+      "content": "C:\\Users\\shami\\.cache\\hyperframes\\history\\1ac7bba2-04a9-4fd3-8742-729f12b79382\\blobs\\35\\3574cadc9e7db277d0a1cd42800d87684a7480167d0f1903e5140824f4df1ca1"
+    },
+    "package.json": {
+      "hash": "6d37ff8d559f376266598cacc2de79041c14ab76b550da071d088c43b187e262",
+      "content": "C:\\Users\\shami\\.cache\\hyperframes\\history\\1ac7bba2-04a9-4fd3-8742-729f12b79382\\blobs\\6d\\6d37ff8d559f376266598cacc2de79041c14ab76b550da071d088c43b187e262"
+    }
+  },
+  "revisions": {
+    "537edc36-afb9-4a50-9989-acaf400ca42d": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1794190626065,
+      "endedAt": 1794190626788,
+      "files": {
+        "hyperframes.json": {
+          "before": "C:\\Users\\shami\\.cache\\hyperframes\\history\\1ac7bba2-04a9-4fd3-8742-729f12b79382\\blobs\\53\\53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50",
+          "after": "C:\\Users\\shami\\.cache\\hyperframes\\history\\1ac7bba2-04a9-4fd3-8742-729f12b79382\\blobs\\a4\\a460a1cf3fcc2672ccbd28820fc6190c0f0ef7eb43b9e0b56e888222994fc057"
+        },
+        "index.html": {
+          "before": "C:\\Users\\shami\\.cache\\hyperframes\\history\\1ac7bba2-04a9-4fd3-8742-729f12b79382\\blobs\\8e\\8e2c4b730dce0d24b1133137acc6df3e610c321d3c11a487738c68e0a78ef8b7",
+          "after": "C:\\Users\\shami\\.cache\\hyperframes\\history\\1ac7bba2-04a9-4fd3-8742-729f12b79382\\blobs\\35\\3574cadc9e7db277d0a1cd42800d87684a7480167d0f1903e5140824f4df1ca1"
+        },
+        "package.json": {
+          "before": "C:\\Users\\shami\\.cache\\hyperframes\\history\\1ac7bba2-04a9-4fd3-8742-729f12b79382\\blobs\\8c\\8cf146b838044c0723384979edd913c910b56a174a61dd05476fa237b80cc2e4",
+          "after": "C:\\Users\\shami\\.cache\\hyperframes\\history\\1ac7bba2-04a9-4fd3-8742-729f12b79382\\blobs\\6d\\6d37ff8d559f376266598cacc2de79041c14ab76b550da071d088c43b187e262"
+        }
+      }
+    }
+  },
+  "checks": {
+    "latest": {
+      "revision": "537edc36-afb9-4a50-9989-acaf400ca42d",
+      "id": "54b0dd00-c73b-4a39-941a-ee8777b9db1d"
+    },
+    "revisions": {
+      "537edc36-afb9-4a50-9989-acaf400ca42d": [
+        {
+          "id": "54b0dd00-c73b-4a39-941a-ee8777b9db1d",
+          "scope": "project",
+          "report": "C:\\Users\\shami\\OneDrive\\Desktop\\stock-analyzer\\brag-output\\composition\\.hyperframes\\artifacts\\checks\\54b0dd00-c73b-4a39-941a-ee8777b9db1d.json",
+          "metadata": {
+            "ok": true,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 45000,
+              "cache": true,
+              "contrast": true,
+              "craft": true,
+              "strict": false,
+              "snapshots": false,
+              "browserGpuMode": "auto",
+              "includeUnmounted": false
+            }
+          },
+          "createdAt": 1794190637278,
+          "contentHash": "f8425d810fe87449ed65951389c56b86da75546887c15dc47ff157a6be801a02",
+          "revision": "537edc36-afb9-4a50-9989-acaf400ca42d",
+          "inputFingerprint": "75589c3258a43c8664fb34cc174f90823c7327f71a3b6f5f69b25a53299fd46a",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ]
+    },
+    "unversioned": [
+      {
+        "id": "b71d8445-fc33-4ff7-b525-07cd204316fe",
+        "scope": "project",
+        "report": "C:\\Users\\shami\\OneDrive\\Desktop\\stock-analyzer\\brag-output\\composition\\.hyperframes\\artifacts\\checks\\b71d8445-fc33-4ff7-b525-07cd204316fe.json",
+        "metadata": {
+          "ok": false,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 45000,
+            "cache": true,
+            "contrast": true,
+            "craft": true,
+            "strict": false,
+            "snapshots": false,
+            "browserGpuMode": "auto",
+            "includeUnmounted": false
+          }
+        },
+        "createdAt": 1794190602002,
+        "contentHash": "da4f2faa0a8eea8c349382b16053d6033a19c8bfcebcedf8a5f1aaa5d808d697",
+        "revision": null,
+        "inputFingerprint": "bd3f3eab84c4aebc4372a431fcd12fc34ff9c7702b72e9de12493b1a8f6e9568",
+        "inputScope": "local-project-files",
+        "attribution": "inputs-changed"
+      }
+    ]
+  },
+  "snapshots": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "renders": {
+    "latest": {
+      "id": "103f99d9-181c-48d9-b2ae-f401cb50b5de",
+      "completedAt": 1794190781549,
+      "output": "C:\\Users\\shami\\OneDrive\\Desktop\\stock-analyzer\\brag-output\\brag.mp4",
+      "status": "completed",
+      "revision": "537edc36-afb9-4a50-9989-acaf400ca42d"
+    },
+    "retainedRevisions": [
+      "537edc36-afb9-4a50-9989-acaf400ca42d"
+    ]
+  },
+  "pendingArtifactCleanup": []
+}

@@ -1,0 +1,727 @@
+{
+  "ok": false,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": false,
+    "errorCount": 1,
+    "warningCount": 7,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "studio_missing_editable_id",
+        "severity": "warning",
+        "message": "<audio data-start=\"0\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\shami\\OneDrive\\Desktop\\stock-analyzer\\brag-output\\composition\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+      },
+      {
+        "code": "media_missing_id",
+        "severity": "error",
+        "message": "<audio> has data-start but no id attribute. The renderer requires id to discover media elements, so this audio will be SILENT in renders.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\shami\\OneDrive\\Desktop\\stock-analyzer\\brag-output\\composition\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add a unique id attribute: <audio id=\"my-audio\" ...>"
+      },
+      {
+        "code": "timeline_track_too_dense",
+        "severity": "warning",
+        "message": "Track 1 has 5 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\shami\\OneDrive\\Desktop\\stock-analyzer\\brag-output\\composition\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"scene1\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene1",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\shami\\OneDrive\\Desktop\\stock-analyzer\\brag-output\\composition\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"scene1\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"scene2\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene2",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\shami\\OneDrive\\Desktop\\stock-analyzer\\brag-output\\composition\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"scene2\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"scene3\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene3",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\shami\\OneDrive\\Desktop\\stock-analyzer\\brag-output\\composition\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"scene3\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"scene4\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene4",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\shami\\OneDrive\\Desktop\\stock-analyzer\\brag-output\\composition\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"scene4\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"scene5\"> is a timeline element that contains nested <h1>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene5",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\shami\\OneDrive\\Desktop\\stock-analyzer\\brag-output\\composition\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"scene5\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      }
+    ],
+    "filesScanned": 1
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 1,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "18",
+          "data-width": "1920",
+          "data-height": "1080"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "time": 0,
+        "url": "https://cdn.tailwindcss.com/",
+        "line": 63
+      }
+    ]
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "duration": 18,
+    "samples": [
+      1,
+      3,
+      5,
+      7,
+      9,
+      11,
+      13,
+      15,
+      17
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 0,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 5,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 3.86:1; WCAG AA requires 4.5:1.",
+        "text": "100% Pass Rate",
+        "fg": "rgb(100,116,139)",
+        "bg": "rgb(13,20,36)",
+        "ratio": 3.86,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(112,127,148)",
+        "large": false,
+        "selector": "div > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 417,
+          "y": 648,
+          "width": 204,
+          "height": 16
+        },
+        "time": 13,
+        "times": [
+          13
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 3.86:1; WCAG AA requires 4.5:1.",
+        "text": "FastAPI Async Engine",
+        "fg": "rgb(100,116,139)",
+        "bg": "rgb(13,20,36)",
+        "ratio": 3.86,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(112,127,148)",
+        "large": false,
+        "selector": "div > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 711,
+          "y": 648,
+          "width": 204,
+          "height": 16
+        },
+        "time": 13,
+        "times": [
+          13
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 3.86:1; WCAG AA requires 4.5:1.",
+        "text": "NumPy & Pandas Core",
+        "fg": "rgb(100,116,139)",
+        "bg": "rgb(13,20,36)",
+        "ratio": 3.86,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(112,127,148)",
+        "large": false,
+        "selector": "div > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(3)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1005,
+          "y": 648,
+          "width": 204,
+          "height": 16
+        },
+        "time": 13,
+        "times": [
+          13
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 3.86:1; WCAG AA requires 4.5:1.",
+        "text": "Point in Time Validation",
+        "fg": "rgb(100,116,139)",
+        "bg": "rgb(13,20,36)",
+        "ratio": 3.86,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(112,127,148)",
+        "large": false,
+        "selector": "div > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(4) > div:nth-of-type(3)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1299,
+          "y": 648,
+          "width": 204,
+          "height": 16
+        },
+        "time": 13,
+        "times": [
+          13
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 4.14:1; WCAG AA requires 4.5:1.",
+        "text": "github.com/shamir-khan-dev/stock-analyzer • Built ",
+        "fg": "rgb(100,116,139)",
+        "bg": "rgb(7,11,20)",
+        "ratio": 4.14,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(107,122,144)",
+        "large": false,
+        "selector": "div > div:nth-of-type(5) > div:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 691.1875,
+          "y": 680,
+          "width": 537.609375,
+          "height": 20
+        },
+        "time": 17,
+        "times": [
+          17
+        ]
+      }
+    ],
+    "enabled": true,
+    "samples": [
+      1,
+      5,
+      9,
+      13,
+      17
+    ],
+    "checked": 52,
+    "passed": 47
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 2,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "first_frame_empty",
+        "severity": "warning",
+        "message": "Frame 0 shows only the background, and the first frame is the thumbnail on social players: have the title or key image already on screen at 0 s instead of entering from nothing; see references/review.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 39 text elements stay under it for 0.5 s or more, the smallest \"Compute Throughput\" at 12 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "Compute Throughput",
+        "selector": "div.mono.text-right > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1646.59,
+          "y": 346.63,
+          "width": 140.41,
+          "height": 16
+        },
+        "time": 7.75,
+        "times": [
+          0.25,
+          0.25,
+          3.75,
+          3.75,
+          3.75,
+          3.75,
+          7.75,
+          7.75,
+          7.75,
+          7.75,
+          7.75,
+          7.75,
+          7.75,
+          7.75,
+          7.75,
+          7.75,
+          7.75,
+          7.75,
+          7.75,
+          7.75,
+          7.75,
+          7.75,
+          7.75,
+          7.75,
+          11.75,
+          11.75,
+          11.75,
+          11.75,
+          11.75,
+          11.75,
+          11.75,
+          11.75,
+          11.75,
+          15.25,
+          15.25,
+          15.25,
+          15.25,
+          15.25,
+          15.25
+        ],
+        "fontPx": 12,
+        "floorPx": 28,
+        "seconds": 3.75,
+        "elements": [
+          {
+            "selector": "div.mono.text-right > div:nth-of-type(1)",
+            "text": "Compute Throughput",
+            "fontPx": 12,
+            "time": 7.75,
+            "seconds": 3.75
+          },
+          {
+            "selector": "div.grid.grid-cols-3 > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
+            "text": "Momentum Engine",
+            "fontPx": 12,
+            "time": 7.75,
+            "seconds": 3.75
+          },
+          {
+            "selector": "div.grid.grid-cols-3 > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1)",
+            "text": "Trend Convergence",
+            "fontPx": 12,
+            "time": 7.75,
+            "seconds": 3.75
+          },
+          {
+            "selector": "div.grid.grid-cols-3 > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1)",
+            "text": "Volatility Bands",
+            "fontPx": 12,
+            "time": 7.75,
+            "seconds": 3.75
+          },
+          {
+            "selector": "div.grid.grid-cols-4 > div:nth-of-type(1) > div:nth-of-type(3)",
+            "text": "100% Pass Rate",
+            "fontPx": 12,
+            "time": 11.75,
+            "seconds": 3.25
+          },
+          {
+            "selector": "div.grid.grid-cols-4 > div:nth-of-type(2) > div:nth-of-type(3)",
+            "text": "FastAPI Async Engine",
+            "fontPx": 12,
+            "time": 11.75,
+            "seconds": 3.25
+          },
+          {
+            "selector": "div.grid.grid-cols-4 > div:nth-of-type(3) > div:nth-of-type(3)",
+            "text": "NumPy & Pandas Core",
+            "fontPx": 12,
+            "time": 11.75,
+            "seconds": 3.25
+          },
+          {
+            "selector": "div.grid.grid-cols-4 > div:nth-of-type(4) > div:nth-of-type(3)",
+            "text": "Point in Time Validation",
+            "fontPx": 12,
+            "time": 11.75,
+            "seconds": 3.25
+          },
+          {
+            "selector": "#scene3 > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "Real Time Mathematical Telemetry",
+            "fontPx": 14,
+            "time": 7.75,
+            "seconds": 3.75
+          },
+          {
+            "selector": "div.text-center.mb-12 > span:nth-of-type(1)",
+            "text": "Engineering Rigor",
+            "fontPx": 14,
+            "time": 11.75,
+            "seconds": 3.25
+          },
+          {
+            "selector": "div.mono.text-sm",
+            "text": "github.com/shamir-khan-dev/stock-analyzer • Built By Shamir Khan",
+            "fontPx": 14,
+            "time": 15.25,
+            "seconds": 2.75
+          },
+          {
+            "selector": "div.grid.grid-cols-3 > div:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "Execution Latency",
+            "fontPx": 16,
+            "time": 7.75,
+            "seconds": 3.75
+          },
+          {
+            "selector": "div.grid.grid-cols-3 > div:nth-of-type(2) > div:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "Execution Latency",
+            "fontPx": 16,
+            "time": 7.75,
+            "seconds": 3.75
+          },
+          {
+            "selector": "div.grid.grid-cols-3 > div:nth-of-type(3) > div:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "Execution Latency",
+            "fontPx": 16,
+            "time": 7.75,
+            "seconds": 3.75
+          },
+          {
+            "selector": "div.grid.grid-cols-4 > div:nth-of-type(1) > div:nth-of-type(2)",
+            "text": "Pytest Suite Verified",
+            "fontPx": 16,
+            "time": 11.75,
+            "seconds": 3.25
+          },
+          {
+            "selector": "div.grid.grid-cols-4 > div:nth-of-type(2) > div:nth-of-type(2)",
+            "text": "API Response Time",
+            "fontPx": 16,
+            "time": 11.75,
+            "seconds": 3.25
+          },
+          {
+            "selector": "div.grid.grid-cols-4 > div:nth-of-type(3) > div:nth-of-type(2)",
+            "text": "Vectorized Math",
+            "fontPx": 16,
+            "time": 11.75,
+            "seconds": 3.25
+          },
+          {
+            "selector": "div.grid.grid-cols-4 > div:nth-of-type(4) > div:nth-of-type(2)",
+            "text": "Lookahead Bias",
+            "fontPx": 16,
+            "time": 11.75,
+            "seconds": 3.25
+          },
+          {
+            "selector": "span.mono.text-slate-300",
+            "text": "Trading Telemetry Bottleneck",
+            "fontPx": 18,
+            "time": 0.25,
+            "seconds": 3.25
+          },
+          {
+            "selector": "span.mono.text-emerald-300",
+            "text": "Quantitative Trading Engine",
+            "fontPx": 18,
+            "time": 3.75,
+            "seconds": 3.75
+          },
+          {
+            "selector": "div.grid.grid-cols-3 > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1)",
+            "text": "Dynamically computes overbought and oversold inflection bounds with rolling exponential smoothing.",
+            "fontPx": 18,
+            "time": 7.75,
+            "seconds": 3.75
+          },
+          {
+            "selector": "div.grid.grid-cols-3 > div:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(2)",
+            "text": "0.42 ms",
+            "fontPx": 18,
+            "time": 7.75,
+            "seconds": 3.75
+          },
+          {
+            "selector": "div.grid.grid-cols-3 > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(1)",
+            "text": "Dual fast/slow EMA divergence tracker with zero lag trigger detection across multi timeframe data.",
+            "fontPx": 18,
+            "time": 7.75,
+            "seconds": 3.75
+          },
+          {
+            "selector": "div.grid.grid-cols-3 > div:nth-of-type(2) > div:nth-of-type(2) > span:nth-of-type(2)",
+            "text": "0.58 ms",
+            "fontPx": 18,
+            "time": 7.75,
+            "seconds": 3.75
+          },
+          {
+            "selector": "div.grid.grid-cols-3 > div:nth-of-type(3) > div:nth-of-type(1) > p:nth-of-type(1)",
+            "text": "Dynamic standard deviation channel envelope detecting breakout squeezes and statistical mean reversion.",
+            "fontPx": 18,
+            "time": 7.75,
+            "seconds": 3.75
+          },
+          {
+            "selector": "div.grid.grid-cols-3 > div:nth-of-type(3) > div:nth-of-type(2) > span:nth-of-type(2)",
+            "text": "0.64 ms",
+            "fontPx": 18,
+            "time": 7.75,
+            "seconds": 3.75
+          },
+          {
+            "selector": "#scene5 > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "FastAPI",
+            "fontPx": 18,
+            "time": 15.25,
+            "seconds": 2.75
+          },
+          {
+            "selector": "#scene5 > div:nth-of-type(1) > span:nth-of-type(2)",
+            "text": "NumPy",
+            "fontPx": 18,
+            "time": 15.25,
+            "seconds": 2.75
+          },
+          {
+            "selector": "#scene5 > div:nth-of-type(1) > span:nth-of-type(3)",
+            "text": "Chart.js",
+            "fontPx": 18,
+            "time": 15.25,
+            "seconds": 2.75
+          },
+          {
+            "selector": "#scene5 > div:nth-of-type(1) > span:nth-of-type(4)",
+            "text": "Docker",
+            "fontPx": 18,
+            "time": 15.25,
+            "seconds": 2.75
+          },
+          {
+            "selector": "#scene2 > div:nth-of-type(2) > div:nth-of-type(1)",
+            "text": "FastAPI Async Core",
+            "fontPx": 20,
+            "time": 3.75,
+            "seconds": 3.75
+          },
+          {
+            "selector": "#scene2 > div:nth-of-type(2) > div:nth-of-type(2)",
+            "text": "100% Vectorized Math",
+            "fontPx": 20,
+            "time": 3.75,
+            "seconds": 3.75
+          },
+          {
+            "selector": "#scene2 > div:nth-of-type(2) > div:nth-of-type(3)",
+            "text": "Zero Lookahead Bias",
+            "fontPx": 20,
+            "time": 3.75,
+            "seconds": 3.75
+          },
+          {
+            "selector": "#scene1 > p:nth-of-type(1)",
+            "text": "Legacy retail backtesters suffer from severe lookahead bias, unvectorized loops, and sluggish execution.",
+            "fontPx": 24,
+            "time": 0.25,
+            "seconds": 3.25
+          },
+          {
+            "selector": "div.text-2xl.font-bold",
+            "text": "50,000 Candles / Sec",
+            "fontPx": 24,
+            "time": 7.75,
+            "seconds": 3.75
+          },
+          {
+            "selector": "div.grid.grid-cols-3 > div:nth-of-type(1) > div:nth-of-type(1) > h3:nth-of-type(1)",
+            "text": "Relative Strength Index",
+            "fontPx": 24,
+            "time": 7.75,
+            "seconds": 3.75
+          },
+          {
+            "selector": "div.grid.grid-cols-3 > div:nth-of-type(2) > div:nth-of-type(1) > h3:nth-of-type(1)",
+            "text": "MACD & Signal Histogram",
+            "fontPx": 24,
+            "time": 7.75,
+            "seconds": 3.75
+          },
+          {
+            "selector": "div.grid.grid-cols-3 > div:nth-of-type(3) > div:nth-of-type(1) > h3:nth-of-type(1)",
+            "text": "Bollinger Volatility Bands",
+            "fontPx": 24,
+            "time": 7.75,
+            "seconds": 3.75
+          },
+          {
+            "selector": "#scene5 > p:nth-of-type(1)",
+            "text": "Production Grade Quantitative Analysis & Automated Backtesting Engine",
+            "fontPx": 24,
+            "time": 15.25,
+            "seconds": 2.75
+          }
+        ]
+      }
+    ],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 144
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  }
+}

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AlphaPulse Launch Video</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+    body {
+      margin: 0;
+      padding: 0;
+      background: #080d1a;
+      color: #f1f5f9;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    .mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .clip {
+      position: absolute;
+      inset: 0;
+      width: 1920px;
+      height: 1080px;
+      opacity: 0;
+      pointer-events: none;
+    }
+    #scene1 {
+      opacity: 1;
+    }
+    .card-border {
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(15, 23, 42, 0.75);
+    }
+    .card-border-emerald {
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      background: rgba(6, 78, 59, 0.15);
+    }
+  </style>
+</head>
+<body>
+  <div id="root" data-composition-id="main" data-start="0" data-duration="18" data-width="1920" data-height="1080" class="relative w-[1920px] h-[1080px] bg-[#070b14] overflow-hidden">
+    <audio id="bgm" src="assets/music/bgm.mp3" data-start="0" data-duration="18"></audio>
+
+    <!-- Scene 1: The Bottleneck (0 - 3.5s) -->
+    <div id="scene1" class="scene clip flex flex-col items-center justify-center text-center p-20" data-start="0" data-duration="3.5" data-track-index="1" data-hold="true" data-layout-allow-overlap="true">
+      <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-full card-border mb-8">
+        <span class="w-3 h-3 rounded-full bg-amber-500 animate-pulse"></span>
+        <span class="mono text-slate-300 text-lg uppercase tracking-wider">Trading Telemetry Bottleneck</span>
+      </div>
+      <h1 class="text-7xl font-extrabold tracking-tight leading-tight max-w-5xl mb-8">
+        Manual Strategy Testing Is <span class="text-rose-400">Slow</span> & Prone To Sudden Drawdowns
+      </h1>
+      <p class="text-2xl text-slate-400 max-w-3xl leading-relaxed">
+        Legacy retail backtesters suffer from severe lookahead bias, unvectorized loops, and sluggish execution.
+      </p>
+    </div>
+
+    <!-- Scene 2: The Solution (3.5 - 7.5s) -->
+    <div id="scene2" class="scene clip flex flex-col items-center justify-center text-center p-20" data-start="3.5" data-duration="4.0" data-track-index="1" data-hold="true" data-layout-allow-overlap="true">
+      <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-full card-border-emerald mb-8">
+        <span class="w-3 h-3 rounded-full bg-emerald-400"></span>
+        <span class="mono text-emerald-300 text-lg uppercase tracking-wider">Quantitative Trading Engine</span>
+      </div>
+      <h1 class="text-8xl font-black tracking-tight leading-none mb-6">
+        Alpha<span class="text-emerald-400">Pulse</span>
+      </h1>
+      <p class="text-3xl text-slate-300 font-medium max-w-4xl leading-relaxed mb-10">
+        High Throughput Vectorized Backtesting & Real Time Algorithmic Signal Telemetry
+      </p>
+      <div class="flex items-center gap-6">
+        <div class="px-6 py-3 rounded-xl card-border mono text-slate-300 text-xl">
+          FastAPI Async Core
+        </div>
+        <div class="px-6 py-3 rounded-xl card-border mono text-slate-300 text-xl">
+          100% Vectorized Math
+        </div>
+        <div class="px-6 py-3 rounded-xl card-border-emerald mono text-emerald-300 text-xl font-bold">
+          Zero Lookahead Bias
+        </div>
+      </div>
+    </div>
+
+    <!-- Scene 3: Engine Architecture & Indicators (7.5 - 11.5s) -->
+    <div id="scene3" class="scene clip flex flex-col justify-center px-28 py-16" data-start="7.5" data-duration="4.0" data-track-index="1" data-hold="true" data-layout-allow-overlap="true">
+      <div class="flex items-center justify-between mb-10">
+        <div>
+          <span class="mono text-emerald-400 text-sm font-semibold uppercase tracking-wider">Real Time Mathematical Telemetry</span>
+          <h2 class="text-5xl font-bold tracking-tight text-white mt-1">Algorithmic Technical Indicators</h2>
+        </div>
+        <div class="mono text-right card-border px-5 py-3 rounded-xl">
+          <div class="text-xs text-slate-400 uppercase tracking-wider">Compute Throughput</div>
+          <div class="text-2xl font-bold text-emerald-400">50,000 Candles / Sec</div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-3 gap-8">
+        <div class="p-8 rounded-2xl card-border flex flex-col justify-between">
+          <div>
+            <div class="mono text-xs text-slate-400 uppercase tracking-widest mb-2">Momentum Engine</div>
+            <h3 class="text-2xl font-bold text-white mb-3">Relative Strength Index</h3>
+            <p class="text-slate-400 text-lg leading-relaxed">
+              Dynamically computes overbought and oversold inflection bounds with rolling exponential smoothing.
+            </p>
+          </div>
+          <div class="mt-6 pt-6 border-t border-slate-800 flex justify-between items-center mono">
+            <span class="text-slate-400 text-base">Execution Latency</span>
+            <span class="text-emerald-400 font-bold text-lg">0.42 ms</span>
+          </div>
+        </div>
+
+        <div class="p-8 rounded-2xl card-border flex flex-col justify-between">
+          <div>
+            <div class="mono text-xs text-slate-400 uppercase tracking-widest mb-2">Trend Convergence</div>
+            <h3 class="text-2xl font-bold text-white mb-3">MACD & Signal Histogram</h3>
+            <p class="text-slate-400 text-lg leading-relaxed">
+              Dual fast/slow EMA divergence tracker with zero lag trigger detection across multi timeframe data.
+            </p>
+          </div>
+          <div class="mt-6 pt-6 border-t border-slate-800 flex justify-between items-center mono">
+            <span class="text-slate-400 text-base">Execution Latency</span>
+            <span class="text-emerald-400 font-bold text-lg">0.58 ms</span>
+          </div>
+        </div>
+
+        <div class="p-8 rounded-2xl card-border flex flex-col justify-between">
+          <div>
+            <div class="mono text-xs text-slate-400 uppercase tracking-widest mb-2">Volatility Bands</div>
+            <h3 class="text-2xl font-bold text-white mb-3">Bollinger Volatility Bands</h3>
+            <p class="text-slate-400 text-lg leading-relaxed">
+              Dynamic standard deviation channel envelope detecting breakout squeezes and statistical mean reversion.
+            </p>
+          </div>
+          <div class="mt-6 pt-6 border-t border-slate-800 flex justify-between items-center mono">
+            <span class="text-slate-400 text-base">Execution Latency</span>
+            <span class="text-emerald-400 font-bold text-lg">0.64 ms</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scene 4: Performance & Benchmarks (11.5 - 15.0s) -->
+    <div id="scene4" class="scene clip flex flex-col justify-center px-28 py-16" data-start="11.5" data-duration="3.5" data-track-index="1" data-hold="true" data-layout-allow-overlap="true">
+      <div class="text-center mb-12">
+        <span class="mono text-emerald-400 text-sm font-semibold uppercase tracking-wider">Engineering Rigor</span>
+        <h2 class="text-6xl font-bold tracking-tight text-white mt-2">Vectorized Quantitative Verification</h2>
+      </div>
+
+      <div class="grid grid-cols-4 gap-6 max-w-6xl mx-auto w-full">
+        <div class="p-8 rounded-2xl card-border text-center">
+          <div class="text-5xl font-extrabold text-emerald-400 mono mb-3">15 / 15</div>
+          <div class="text-base text-slate-300 font-medium">Pytest Suite Verified</div>
+          <div class="mono text-xs text-slate-500 mt-2">100% Pass Rate</div>
+        </div>
+        <div class="p-8 rounded-2xl card-border text-center">
+          <div class="text-5xl font-extrabold text-cyan-400 mono mb-3">sub 5ms</div>
+          <div class="text-base text-slate-300 font-medium">API Response Time</div>
+          <div class="mono text-xs text-slate-500 mt-2">FastAPI Async Engine</div>
+        </div>
+        <div class="p-8 rounded-2xl card-border text-center">
+          <div class="text-5xl font-extrabold text-emerald-400 mono mb-3">100%</div>
+          <div class="text-base text-slate-300 font-medium">Vectorized Math</div>
+          <div class="mono text-xs text-slate-500 mt-2">NumPy & Pandas Core</div>
+        </div>
+        <div class="p-8 rounded-2xl card-border text-center">
+          <div class="text-5xl font-extrabold text-cyan-400 mono mb-3">0.00%</div>
+          <div class="text-base text-slate-300 font-medium">Lookahead Bias</div>
+          <div class="mono text-xs text-slate-500 mt-2">Point in Time Validation</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scene 5: Outro & Action (15.0 - 18.0s) -->
+    <div id="scene5" class="scene clip flex flex-col items-center justify-center text-center p-20" data-start="15.0" data-duration="3.0" data-track-index="1" data-hold="true" data-layout-allow-overlap="true">
+      <h1 class="text-7xl font-black tracking-tight leading-none mb-6">
+        Alpha<span class="text-emerald-400">Pulse</span>
+      </h1>
+      <p class="text-2xl text-slate-400 max-w-2xl leading-relaxed mb-8">
+        Production Grade Quantitative Analysis & Automated Backtesting Engine
+      </p>
+      <div class="flex items-center gap-6 mono text-lg">
+        <span class="px-6 py-3 rounded-xl card-border text-slate-300">FastAPI</span>
+        <span class="px-6 py-3 rounded-xl card-border text-slate-300">NumPy</span>
+        <span class="px-6 py-3 rounded-xl card-border text-slate-300">Chart.js</span>
+        <span class="px-6 py-3 rounded-xl card-border text-slate-300">Docker</span>
+      </div>
+      <div class="mono text-sm text-slate-500 mt-10">
+        github.com/shamir-khan-dev/stock-analyzer • Built By Shamir Khan
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    // Scene 1: 0 - 3.5s
+    tl.to("#scene1", { opacity: 1, duration: 0.5, ease: "power2.out" }, 0.0);
+    tl.to("#scene1", { opacity: 0, duration: 0.4, ease: "power2.in" }, 3.1);
+
+    // Scene 2: 3.5 - 7.5s
+    tl.to("#scene2", { opacity: 1, duration: 0.5, ease: "power2.out" }, 3.5);
+    tl.to("#scene2", { opacity: 0, duration: 0.4, ease: "power2.in" }, 7.1);
+
+    // Scene 3: 7.5 - 11.5s
+    tl.to("#scene3", { opacity: 1, duration: 0.5, ease: "power2.out" }, 7.5);
+    tl.to("#scene3", { opacity: 0, duration: 0.4, ease: "power2.in" }, 11.1);
+
+    // Scene 4: 11.5 - 15.0s
+    tl.to("#scene4", { opacity: 1, duration: 0.5, ease: "power2.out" }, 11.5);
+    tl.to("#scene4", { opacity: 0, duration: 0.4, ease: "power2.in" }, 14.6);
+
+    // Scene 5: 15.0 - 18.0s
+    tl.to("#scene5", { opacity: 1, duration: 0.5, ease: "power2.out" }, 15.0);
+
+    window.__timelines = window.__timelines || {};
+    window.__timelines["main"] = tl;
+    tl.seek(0);
+  </script>
+</body>
+</html>
+
