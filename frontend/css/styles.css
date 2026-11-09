@@ -72,6 +72,39 @@ body {
   min-height: 100vh;
 }
 
+/* Institutional Terminal Market Strip */
+.terminal-market-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #07090e;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 6px 20px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-secondary);
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 16px;
+}
+
+.strip-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.strip-label {
+  color: #f59e0b;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.tick-up {
+  color: #00e676;
+  font-weight: 600;
+}
+
 /* ==========================================================================
    Header Navigation Bar
    ========================================================================== */
