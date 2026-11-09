@@ -10,3 +10,4 @@ Key Architecture Capabilities:
 
 Tech Stack: FastAPI, Python 3.13, NumPy, Pandas, Chart.js, Docker, Pytest
 Project Code: https://github.com/shamir-khan-dev/stock-analyzer
+
